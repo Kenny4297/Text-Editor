@@ -13,6 +13,7 @@
 * [Tests](#tests)
 * [Questions](#questions)
 * [Deployment](#deployment)
+* [Screenshot](#screenshot)
 
 ### Description
 A fun PWA text editor that the user can use when internet isn't available.
@@ -36,6 +37,8 @@ N/A
 * Any questions? Visit the github repository here! https://github.com/Kenny4297/Editorial-of-text
 
 ### Deployment
-
 Here is the link to the deployment: [deployment](https://editorial-of-text-production.up.railway.app/)
+
+### Screen Shot
+The following is a screen shot of the final product: ![Screenshot](./client/src/assets/TextEditor.png)
 
