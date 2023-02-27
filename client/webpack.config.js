@@ -12,6 +12,8 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 module.exports = () => {
   return {
     mode: 'development',
+
+    //The entry point for our files
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js'
@@ -21,10 +23,14 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+
+      //Creating the plugin that generates our html file and bundles
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE'
       }),
+
+      //Injecting the service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
@@ -51,13 +57,16 @@ module.exports = () => {
     ],
 
     module: {
-      //Adding the loaders to the webpack
+      //Adding the loaders to the webpack. 
       rules: [
         {
           test: /\.css$/i,
+
+          //Converting the css into js
           use: ['style-loader', 'css-loader'],
         },
         {
+          //adding babel in order to use the newest form of JavaScript (ES6)
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
